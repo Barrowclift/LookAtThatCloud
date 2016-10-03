@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Chase &amp; Aimee</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'> -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,900" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/min/normalize.min.css">
+  <link rel="stylesheet" href="css/min/skeleton.min.css">
+  <link rel="stylesheet" href="css/min/custom.min.css">
+
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script type="text/javascript">var submitted=false;</script>
+  <script>
+    function isNumberKey(evt) {
+      var charCode = (evt.which) ? evt.which : event.keyCode;
+      if ((charCode < 48 || charCode > 57))
+        return false;
+
+      return true;
+    }
+    function validateNumber(event) {
+      if (event.target.value == "") {
+        event.target.value = "1";
+      } else {
+        var intValue = parseInt(event.target.value);
+        if (intValue < 1) {
+          event.target.value = "1";
+        } else if (intValue > 20) {
+          event.target.value = "20";
+        }
+      }
+    }
+    function readyToSubmit(event) {
+      // If email and name are provided
+      if (document.getElementById('entry.189008425').value != ""
+        && document.getElementById('entry.1176921021').value != "") {
+        // If attending
+        if (document.getElementById('entry.644721739').checked) {
+          // If food preference has been entered
+          if (document.getElementById('entry.368489061').value == "") {
+            document.getElementById('submit').disabled = true;
+          } else {
+            document.getElementById('submit').disabled = false;
+          }
+        } else {
+          document.getElementById('submit').disabled = false;
+        }
+      } else {
+        document.getElementById('submit').disabled = true;
+      }
+    }
+    $(document).ready(function(){
+      $('input[type=radio]').click(function() {
+        if (this.value === 'no') {
+          document.getElementById("can-attend").style.display = "none";
+          document.getElementById("not-attend").style.display = "block";
+        } else {
+          document.getElementById("can-attend").style.display = "block";
+          document.getElementById("not-attend").style.display = "none";
+        }
+      });
+    });
+  </script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <div id="main-picture" class="section values">
+    <div class="container">
+      <div class="row">
+        <div id="splash-image" class="eight columns category">
+          <h1 class="image-text-shadow section-heading">Chase<div class="show-when-large"></div> &amp; <div class="show-when-large"></div>Aimee</h1>
+          <h4 class="image-text-shadow section-description">January 28, 2017<br>Lake Forest, IL</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section our-story">
+    <div class="container">
+      <div class="writing">
+        <h1 class="section-heading">Our Story</h1>
+        <h5 class="section-description" style="font-weight:500;">We were together. I forget the rest.<br><span class="right-align">-Walt Whitman</span></h5>
+        <p>There was no meet-cute in the grocery store, no blind date gone right. Chase and I, we've simply always known one another.</p>
+        <p>Our dads were old friends and made sure to bring their growing families together once a year for a Wisconsin camping trip. I suppose that our first memories of one another came from those camping trips.  We'd pedal furiously around on our bikes, catch frogs and the occasional fish, roast marshmallows around a campfire...Needless to say, we have a lot of shared childhood memories.</p>
+        <img src="./images/camping.jpg" />
+        <p>As we grew older and life became more hectic, those summer camping trips stopped. Aside from the occasional comment that would make its way through the paternal grapevine, Chase faded into the background of my life, as I'm sure I did in his.</p>
+        <h4>Ten Years Later</h4>
+        <p>Kari and I had remained loosely in contact over the years and one day, she invited me to visit her in North Carolina.  After reconnecting over that visit, she invited me to come back later that year for a New Year's Eve party. Her brothers were going to be there as well, and--excited at the prospect of a camping-buddy reunion--I bought a dress and a ticket.</p>
+        <p>I'll never forget walking into Kari's apartment and seeing Chase for the first time in nearly a decade...I knew then that something special was there.</p>
+        <h4>One New Year's Kiss Later</h4>
+        <p>After parting ways that weekend, I felt a strange sense of loss. My childhood friend had grown into this super interesting and funny guy with which I had so much in common... BUT, he had recently moved to New Mexico, 1400 miles away from my Chicago apartment. "There is no way this could ever work out," I remember thinking sadly to myself.</p>
+        <p>And then my phone chirped. Text message from Chase Guarnaccio.</p>
+        <h4>Many Trips to New Mexico Later</h4>
+        <p>Chase was accepted into a graduate program at Wright Patterson Air Force Base and moved to Dayton, Ohio in August of 2014. Our short visits turned into long ones. He shared his love of Lord of the Rings and astronomy with me; I introduced him to running and let him in on my travel dreams. We argued over the merits vanilla ice cream and whether it's grammatically acceptable to have a 1-sentence paragraph. We fiercely encouraged each other, and shared our goals and hopes for the future. We fell more deeply in love.</p>
+        <p>On July 30, 2016, while enjoying the sunset at his family's property in Wisconsin, Chase asked me to be his wife. Amid happy tears, fireworks, and a very stealthy brotherly contingent taking photos in a nearby deer stand, I said "YES!!!"  Chase had arranged for my family to be there after the proposal and we spent the rest of that night celebrating under the stars, a bonfire lighting up everyone's excited faces.</p>
+        <img src="./images/smiling.jpg" />
+      </div>
+    </div>
+  </div>
+
+  <div class="section when-where">
+    <div class="container">
+      <h1 class="section-heading">When &amp; Where</h1>
+      <div class="row">
+        <div class="one-half column category">
+          <h4>Saturday, January 28, 2017</h4>
+          <table class="u-full-width">
+            <tbody>
+              <tr>
+                <td>Shuttle to/from hotel:</td>
+                <td>2-5pm</td>
+              </tr>
+              <tr>
+                <td>Wedding Ceremony:</td>
+                <td>3-4pm</td>
+              </tr>
+              <tr>
+                <td>Bridal Party Photos:</td>
+                <td>4-5pm</td>
+              </tr>
+              <tr>
+                <td>Cocktail Hour:</td>
+                <td>5-6pm</td>
+              </tr>
+              <tr>
+                <td>Reception:</td>
+                <td>6-11pm</td>
+              </tr>
+              <tr>
+                <td>Shuttle to/from hotel:</td>
+                <td>10pm-1am</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="one-half column category">
+          <div>
+            <h4>Ceremony</h4>
+            <p style="font-size: 1.1em;margin-bottom:5rem;"><a href="http://www.churchofstmary.org/">Church of St. Mary</a><br>175 E Illinois Rd<br>Lake Forest, IL 60045</p>
+            <h4>Cocktail Hour &amp; Reception</h4>
+            <p style="font-size: 1.1em;margin-bottom:5rem;"><a href="http://thedeerpathinn.com/">Deer Path Inn</a><br>255 E Illinois Rd<br>Lake Forest, IL 60045</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="writing">
+          <p>The ceremony and reception site are on the same block. It is a two minute walk from the church to the cocktail hour/reception site.</p>
+          <p>Looking for something to do during the hour in between the ceremony and the cocktail hour? We recommend warming up and having a pint at the <a href="http://thedeerpathinn.com/dining/white-hart-pub/">White Hart Pub</a>, an English-style pub on-site of the cocktail hour and reception.</p>
+        </div>
+      </div>
+      <!-- <div class="row">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2953.3878220383995!2d-87.84486068438169!3d42.24888987919448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x92fe7af91dd0c866!2sChurch+of+St+Mary!5e0!3m2!1sen!2sus!4v1475339082110" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2953.3878220383995!2d-87.84486068438169!3d42.24888987919448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x20ff6ead573367df!2sDeer+Path+Inn!5e0!3m2!1sen!2sus!4v1475339269492" frameborder="0" allowfullscreen></iframe>
+      </div> -->
+    </div>
+  </div>
+
+  <div class="section hotel">
+    <div class="container">
+      <div class="row">
+        <h1 class="section-heading">Hotel</h1>
+        <div class="writing">
+          <p>Our hotel block is at the Hilton Garden Inn. For those who wish to stay on-site of the reception, there are also limited amount of rooms available at Deer Path Inn.</p>  
+        </div>
+      </div>
+      <div class="row">
+        <div class="one-half column category">
+          <h4>Hilton Garden Inn</h4>
+          <p style="font-size: 1.1em;">A shuttle will be running to/from the Deer Path Inn from 2-5pm &amp; 10pm-1am.</p>
+          <p style="font-size: 1.1em;">Please note, while the shuttle will not stop directly at the church, the church is next door to the Deer Path Inn.</p>
+          <p style="font-size: 1.1em;"><a href="http://hiltongardeninn.hilton.com/en/gi/groups/personalized/O/ORDLFGI-BARGUA-20170127/index.jhtml?WT.mc_id=POG​">Click here to make a reservation at the Hilton Garden Inn</a></p>
+          <iframe style="text-align:center;width: 100%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2953.6783636723762!2d-87.90473868457411!3d42.24268395049871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f95a4be6c4ee1%3A0x2d673180c58c80ae!2sHilton+Garden+Inn+Lake+Forest+Mettawa!5e0!3m2!1sen!2sus!4v1475341831423" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="one-half column category">
+          <h4>Deer Path Inn</h4>
+          <p style="font-size: 1.1em;">After a night of dancing, you can simply walk down the hallway to your room.</p>
+          <p style="font-size: 1.1em;">A limited amoung of double queens and kings are available on a first come, first serve basis.</p>
+          <p style="font-size: 1.1em;"><a href="https://www.bookonthenet.net/east/premium/eresmain.aspx?id=O6Nmc7ChAoZV5tQB%2b13YZ8MSBavMmpo%2b9foWlqvIms8%3d&promo_code=Barrowclift12717">Click here to make a reservation at the Deer Path Inn</a></p>
+          <iframe style="text-align:center;width: 100%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2953.3878220383995!2d-87.84486068438169!3d42.24888987919448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x20ff6ead573367df!2sDeer+Path+Inn!5e0!3m2!1sen!2sus!4v1475339269492" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section when-where">
+    <div class="container">
+      <div class="writing">
+        <h1 class="section-heading">Registry</h1>
+        <p style="text-align:center;">🎁&nbsp;&nbsp;&nbsp;&nbsp;TODO&nbsp;&nbsp;&nbsp;&nbsp;🎁</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="secondary-picture" class="section values">
+    <div class="container">
+      <div class="row">
+        <h1 id="fade-me-1" class="section-heading">RSVP</h1>
+        <h3 style="font-weight:500;" id="fade-me-2">We're so excited to celebrate with you</h3>
+      </div>
+      <div class="row">
+        <form id="rsvp" name="rsvp" enctype="text/plain" target="hidden_iframe" onsubmit="submitted=true;" action="https://docs.google.com/forms/d/e/1FAIpQLSfTBw8eB9voNBge8SumKa_YEKwyUPl2KBjiWlMrsob9Pq65aQ/formResponse" class="six offset-by-three columns" style="color: #222222;">
+          <p>Please give us a call at <a href="tel:1-630-334-8572">630-334-8572</a> or RSVP below. Kindly respond by December 1.</p>
+          <div class="row">
+              <input onkeyup="readyToSubmit(event)" class="u-full-width" name="entry.189008425" id="entry.189008425" type="name" placeholder="Full name">
+              <input onkeyup="readyToSubmit(event)" class="u-full-width" name="entry.1176921021" id="entry.1176921021" type="email" placeholder="Email address">
+          </div>
+          <div class="row">
+              <label style="text-align:left;">
+                <span>Can you Attend?&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <input type="radio" name="entry.644721739" id="entry.644721739" onclick="readyToSubmit(event)" checked value="yes">&nbsp;Yes&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="entry.644721739" id="entry.644721739" onclick="readyToSubmit(event)" value="no">&nbsp;No
+              </label>
+          </div>
+          <hr>
+          <div id="can-attend">
+            <div class="row">
+              <div style="text-align:left;">
+                <label style="text-align:left;display:inline;">Number of Attendees&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input id="attendees" name="entry.1367995216" id="entry.1367995216" style="display:inline;" onfocusout="validateNumber(event)" onkeypress="return isNumberKey(event)" type="number" min="1" max="20" value="1">
+              </div>
+            </div>
+            <div class="row">
+              <div style="text-align:left;">
+                <textarea onkeyup="readyToSubmit(event)" name="entry.368489061" id="entry.368489061" rows="10" class="u-full-width" placeholder="For each attendee: Chicken, Vegetarian, or Kids Meal?"></textarea>
+              </div>
+            </div>
+          </div>
+          <div id="not-attend">
+            <label style="text-align:left;margin-bottom: 2.5rem;">We're sorry you can't make it. We'll miss you!</label>
+            <textarea name="entry.1156561843" id="entry.1156561843" rows="10" class="u-full-width" placeholder="If you want, feel free to leave us a note, we'd appreciate hearing from you. :)"></textarea>
+          </div>
+          <input class="button-primary" disabled id="submit" style="margin-bottom:0;margin-top:1rem;" type="submit" value="Submit">
+        </form>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="section our-story">
+    <div class="container">
+      <h4 class="section-heading" style="font-weight:600;">#ChasingAimee</h4>
+      <a href="https://twitter.com/search?q=%23chasingAimee">
+        <svg style="width: 32px;height:32px;"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:cc="http://creativecommons.org/ns#"
+           xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+           xmlns:svg="http://www.w3.org/2000/svg"
+           xmlns="http://www.w3.org/2000/svg"
+           version="1.1"
+           id="svg3626"
+           viewBox="0 0 300.00006 244.18703">
+          <defs
+             id="defs3628" />
+          <metadata
+             id="metadata3631">
+            <rdf:RDF>
+              <cc:Work
+                 rdf:about="">
+                <dc:format>image/svg+xml</dc:format>
+                <dc:type
+                   rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                <dc:title></dc:title>
+              </cc:Work>
+            </rdf:RDF>
+          </metadata>
+          <g
+             transform="translate(-539.17946,-568.85777)"
+             id="layer1">
+            <path
+               id="path3611"
+               style="fill-opacity:1;fill-rule:nonzero;stroke:none"
+               d="m 633.89823,812.04479 c 112.46038,0 173.95627,-93.16765 173.95627,-173.95625 0,-2.64628 -0.0539,-5.28062 -0.1726,-7.90305 11.93799,-8.63016 22.31446,-19.39999 30.49762,-31.65984 -10.95459,4.86937 -22.74358,8.14741 -35.11071,9.62551 12.62341,-7.56929 22.31446,-19.54304 26.88583,-33.81739 -11.81284,7.00307 -24.89517,12.09297 -38.82383,14.84055 -11.15723,-11.88436 -27.04079,-19.31655 -44.62892,-19.31655 -33.76374,0 -61.14426,27.38052 -61.14426,61.13233 0,4.79784 0.5364,9.46458 1.58538,13.94057 -50.81546,-2.55686 -95.87353,-26.88582 -126.02546,-63.87991 -5.25082,9.03545 -8.27852,19.53111 -8.27852,30.73006 0,21.21186 10.79366,39.93837 27.20766,50.89296 -10.03077,-0.30992 -19.45363,-3.06348 -27.69044,-7.64676 -0.009,0.25652 -0.009,0.50661 -0.009,0.78077 0,29.60957 21.07478,54.3319 49.0513,59.93435 -5.13757,1.40062 -10.54335,2.15158 -16.12196,2.15158 -3.93364,0 -7.76596,-0.38716 -11.49099,-1.1026 7.78383,24.2932 30.35457,41.97073 57.11525,42.46543 -20.92578,16.40207 -47.28712,26.17062 -75.93712,26.17062 -4.92898,0 -9.79834,-0.28036 -14.58427,-0.84634 27.05868,17.34379 59.18936,27.46396 93.72193,27.46396" />
+          </g>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+<script type="text/javascript">
+  $('#rsvp').on('submit', function(e) {
+    console.log("HELLO");
+    console.log(e);
+    $('#rsvp *').fadeOut(500);
+    $('#fade-me-1').fadeOut(500);
+    $('#fade-me-2').fadeOut(500);
+    $('#rsvp').prepend('<h5 style="font-weight:600;margin-bottom:0;">Thanks for RSVPing!</h5>');
+  });
+</script>
+</html>
