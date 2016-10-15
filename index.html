@@ -28,6 +28,7 @@
   <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./jquery.leanModal.min.js"></script>
   <script type="text/javascript">var submitted=false;</script>
   <script>
     function isNumberKey(evt) {
@@ -68,6 +69,29 @@
         document.getElementById('submit').disabled = true;
       }
     }
+    function openPeopleGroup(evt, peopleGroup) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the link that opened the tab
+      document.getElementById(peopleGroup).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    $(function() {
+        $('a[rel*=leanModal]').leanModal({ top : 200, closeButton: ".modal_close", nextModal: ".next_modal", previousModal: ".previous_modal" });   
+    });
     $(document).ready(function(){
       $('input[type=radio]').click(function() {
         if (this.value === 'no') {
@@ -79,6 +103,19 @@
         }
       });
     });
+
+    document.onkeydown = checkKey;
+    function checkKey(e) {
+      e = e || window.event;
+      console.log(e.keyCode)
+      if (e.keyCode == '37') {
+        $(".previous_modal").click()
+      } else if (e.keyCode == '39') {
+        $(".next_modal").click()
+      } else if (e.keyCode == '27') {
+        $(".modal_close").click()
+      }
+    }
   </script>
 
   <!-- Favicon
@@ -90,6 +127,30 @@
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <nav class="navbar">
+    <div class="container">
+      <ul class="navbar-list">
+        <li class="navbar-item">
+          <a class="navbar-link" href="#our-story">Our Story</a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href="#when-and-where">When &amp; Where</a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href="#hotel">Hotel</a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href="#registry">Registry</a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href="#bridal-party">Bridal Party</a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href="#rsvp">RSVP</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
   <div id="main-picture" class="section values">
     <div class="container">
@@ -102,7 +163,7 @@
     </div>
   </div>
 
-  <div class="section our-story">
+  <div id="our-story" class="section our-story">
     <div class="container">
       <div class="writing">
         <h1 class="section-heading">Our Story</h1>
@@ -125,8 +186,8 @@
     </div>
   </div>
 
-  <div class="section when-where">
-    <div class="container">
+  <div id="when-and-where" class="section when-where">
+    <div class="container large">
       <h1 class="section-heading">When &amp; Where</h1>
       <div class="row">
         <div class="one-half column category">
@@ -169,6 +230,8 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="container">
       <div class="row">
         <div class="writing">
           <p>The ceremony and reception site are on the same block. It is a two minute walk from the church to the cocktail hour/reception site.</p>
@@ -182,7 +245,7 @@
     </div>
   </div>
 
-  <div class="section hotel">
+  <div id="hotel" class="section hotel">
     <div class="container">
       <div class="row">
         <h1 class="section-heading">Hotel</h1>
@@ -190,6 +253,8 @@
           <p>Our hotel block is at the Hilton Garden Inn. For those who wish to stay on-site of the reception, there are also limited amount of rooms available at Deer Path Inn.</p>  
         </div>
       </div>
+    </div>
+    <div class="container large">
       <div class="row">
         <div class="one-half column category">
           <h4>Hilton Garden Inn</h4>
@@ -209,7 +274,7 @@
     </div>
   </div>
 
-  <div class="section when-where">
+  <div id="registry" class="section when-where">
     <div class="container">
       <div class="writing">
         <h1 class="section-heading">Registry</h1>
@@ -218,7 +283,159 @@
     </div>
   </div>
 
-  <div id="secondary-picture" class="section values">
+  <div id="bridal-party" class="section">
+    <div class="container">
+        <h1 class="section-heading">Bridal Party</h1>
+        <ul class="tab">
+          <li><a href="javascript:void(0)" class="left-tab tablinks button button-primary active" onclick="openPeopleGroup(event, 'Bridesmaids')">Bridesmaids</a></li>
+          <li><a href="javascript:void(0)" class="right-tab tablinks button button-primary" onclick="openPeopleGroup(event, 'Groomsmen')">Groomsmen</a></li>
+        </ul>
+        <div id="bio" class="modal" style="display:none;">
+          <img />
+          <div class="scroll">
+            <h4 class="name"></h5>
+            <h5 class="description"></h5>
+            <h6 class="title1">You'll Find Us</h6>
+            <p class="youll-find-us"></p>
+            <h6 class="title2">Favorite Memory</h6>
+            <p class="favorite-memory"></p>
+            <h6 class="title3">Most Likely To</h6>
+            <p class="most-likely-to"></p>
+          </div>
+          <div class="button-group">
+            <a class="button left button-primary previous_modal"><</a>
+            <a class="button button-primary modal_close">Close</a>  
+            <a class="button right button-primary next_modal">></a>
+          </div>
+        </div>
+        <div id="Bridesmaids" class="tabcontent" style="display:block;">
+          <div class="row">
+            <div class="three columns">
+              <a id="natalie" href="#bio-natalie" rel="leanModal" name="natalie">
+                <img src="./images/natalie.jpg" />
+                <h5>Natalie</h5>
+                <h6>Cousin, Maid of Honor</h6>
+              </a>
+            </div>
+            <div class="three columns">
+              <a id="tara" href="#bio-tara" rel="leanModal" name="tara">
+                <img src="./images/tara.jpg" />
+                <h5>Tara</h5>
+                <h6>Cousin, Maid of Monor</h6>
+              </a>
+            </div>
+            <div class="three columns">
+              <a id="kari" href="#bio-kari" rel="leanModal" name="kari">
+                <img src="./images/kari.jpg" />
+                <h5>Kari</h5>
+                <h6>Childhood Friend</h6>
+              </a>
+            </div>
+            <div class="three columns">
+              <a id="lauren-childhood-friend" href="#bio-lauren-childhood-friend" rel="leanModal" name="lauren-childhood-friend">
+                <img src="./images/lauren-childhood-friend.jpg" />
+                <h5>Lauren</h5>
+                <h6>Childhood Friend</h6>
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="three columns">
+              <a id="lauren-college-friend" href="#bio-lauren-college-friend" rel="leanModal" name="lauren-college-friend">
+                <img src="./images/lauren-college-friend.jpg" />
+                <h5>Lauren</h5>
+                <h6>College Friend</h6>
+              </a>
+            </div>
+            <div class="three columns">
+              <a id="meggie" href="#bio-meggie" rel="leanModal" name="meggie">
+                <img src="./images/meggie.jpg" />
+                <h5>Meggie</h5>
+                <h6>Soon-to-be Sister-in-Law</h6>
+              </a>
+            </div>
+            <div class="three columns">
+              <a id="rachel" href="#bio-rachel" rel="leanModal" name="rachel">
+                <img src="./images/rachel.jpg" />
+                <h5>Rachel</h5>
+                <h6>Childhood Friend</h6>
+              </a>
+            </div>
+            <div class="three columns">
+              <a id="sarah" href="#bio-sarah" rel="leanModal" name="sarah">
+                <img src="./images/sarah.jpg" />
+                <h5>Sarah</h5>
+                <h6>College Roommate</h6>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="Groomsmen" class="tabcontent">
+          <div class="row">
+            <div class="three columns">
+              <a id="justin" href="#bio-justin" rel="leanModal" name="justin">
+                <img src="./images/justin.jpg" />
+                <h5>Justin</h5>
+                <h6>Brother, Best Man</h6>
+              </a>
+            </div>
+            <div class="three columns">
+              <a id="lucas" href="#bio-lucas" rel="leanModal" name="lucas">
+                <img src="./images/lucas.jpg" />
+                <h5>Lucas</h5>
+                <h6>Brother, Best Man</h6>
+              </a>
+            </div>
+            <div class="three columns">
+              <a id="doug" href="#bio-doug" rel="leanModal" name="doug">
+                <img src="./images/doug.jpg" />
+                <h5>Doug</h5>
+                <h6>Childhood Friend</h6>
+              </a>
+            </div>
+            <div class="three columns">
+              <a id="john" href="#bio-john" rel="leanModal" name="john">
+                <img src="./images/john.jpg" />
+                <h5>John</h5>
+                <h6>College Friend</h6>
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="three columns">
+              <a id="marc" href="#bio-marc" rel="leanModal" name="marc">
+                <img src="./images/marc.jpg" />
+                <h5>Marc</h5>
+                <h6>Brother of the Bride</h6>
+              </a>
+            </div>
+            <div class="three columns">
+              <a id="michael" href="#bio-michael" rel="leanModal" name="michael">
+                <img src="./images/michael.jpg" />
+                <h5>Michael</h5>
+                <h6>Brother of the Bride</h6>
+              </a>
+            </div>
+            <div class="three columns">
+              <a id="richie" href="#bio-richie" rel="leanModal" name="richie">
+                <img src="./images/richie.jpg" />
+                <h5>Richie</h5>
+                <h6>College Friend</h6>
+              </a>
+            </div>
+            <div class="three columns">
+              <a id="ryan" href="#bio-ryan" rel="leanModal" name="ryan">
+                <img src="./images/ryan.jpg" />
+                <h5>Ryan</h5>
+                <h6>College Friend</h6>
+              </a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div id="rsvp" class="section values secondary-picture">
     <div class="container">
       <div class="row">
         <h1 id="fade-me-1" class="section-heading">RSVP</h1>
@@ -315,5 +532,42 @@
     $('#fade-me-2').fadeOut(500);
     $('#rsvp').prepend('<h5 style="font-weight:600;margin-bottom:0;">Thanks for RSVPing!</h5>');
   });
+
+  // // Get the modal
+  // var modal = document.getElementById('example');
+
+  // // When the user clicks anywhere outside of the modal, close it
+  // window.onclick = function(event) {
+  //   if (event.target == modal) {
+  //     modal.style.opacity = 0;
+  //   }
+  // }
 </script>
+<!-- <script>
+  // Get the modal
+  var modal = document.getElementById('myModal');
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("bio-natalie");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script> -->
 </html>

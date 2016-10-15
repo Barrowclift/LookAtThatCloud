@@ -142,7 +142,8 @@ a:hover {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 2px 10px 0 rgba(0, 0, 0, 0.10);
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 2px 10px 0 rgba(0, 0, 0, 0.10);
   -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 2px 10px 0 rgba(0, 0, 0, 0.10);
-  background-color: RGBA(244,246,247,0.9);
+  /*background-color: RGBA(244,246,247,0.9);*/
+  background: RGBA(238,238,238,0.9);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
@@ -167,7 +168,8 @@ form {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 2px 10px 0 rgba(0, 0, 0, 0.10);
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 2px 10px 0 rgba(0, 0, 0, 0.10);
   -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 2px 10px 0 rgba(0, 0, 0, 0.10);
-  background-color: RGBA(244,246,247,0.9);
+  /*background-color: RGBA(244,246,247,0.9);*/
+  background: RGBA(238,238,238,0.9);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
@@ -252,6 +254,355 @@ path:hover {
   margin-bottom: 1.2rem;
 }
 
+.navbar {
+  display: block;
+  width: 100%;
+  height: 6.5rem;
+  text-align: center;
+  background: #EEEEEE;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  z-index: 99;
+  position: relative;
+  height: auto;
+}
+.navbar > .container {
+  width: 100%;
+  max-width: 829px;
+}
+.navbar-list {
+  list-style: none;
+  margin-bottom: 0;
+}
+.navbar-item {
+  position: relative;
+  margin-bottom: 0;
+  display: inline-block;
+  width: 49%;
+}
+.navbar-link {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: .2rem;
+  text-decoration: none;
+  line-height: 5rem;
+  color: #222;
+}
+.navbar-item a:link,
+.navbar-item a:visited {
+  color: #222;
+}
+.navbar-item a:hover {
+  color: #E7B73C;
+}
+/*.navbar {
+    visibility: hidden;
+  }*/
+
+
+/* Style the list */
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top:2.5em;
+    overflow: hidden;
+    /*border: 1px solid #ccc;*/
+    /*background-color: #f1f1f1;*/
+}
+
+/* Float the list items side by side */
+ul.tab li {
+  /*float: left;*/
+  display:inline-block;
+  margin-left: -2px;
+  margin-right: -2px;
+  margin-bottom:0;
+}
+
+/* Style the links inside the list items */
+ul.tab li a {
+  margin-bottom:0;
+    /*display: inline-block;*/
+    /*color: black;*/
+    /*text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;*/
+    padding-left: 2em;
+padding-right: 2em;
+}
+ul.tab li a.button {
+  background-color: white;
+  border-color: #ECB549;
+  color: #ECB549;
+}
+ul.tab li a.button.active {
+  background-color: #ECB549;
+  border-color: transparent;
+  color: white;
+}
+
+/* Change background color of links on hover */
+/*ul.tab li a:hover {background-color: #ddd;}*/
+
+/* Create an active/current tablink class */
+/*ul.tab li a:focus, .active {background-color: #ccc;}*/
+
+/* Style the tab content */
+#bridal-party .container {
+  width: 100%;
+  max-width: none;
+}
+.three.columns {
+  width: 47%;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+}
+.tabcontent .row {
+  margin-top: 0vw;
+}
+.three.columns {
+  margin-top: 4vw;
+}
+.left-tab {
+  border-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.right-tab {
+  border-radius: 4px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.tabcontent .row {
+    -webkit-animation: fadeEffect 0.5s;
+    animation: fadeEffect 0.5s; /* Fading effect takes 1 second */
+}
+.tabcontent img {
+  width: 100%;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+.tabcontent {
+  display: none;
+  /*margin-top: 1em;*/
+    /*padding-top: 4em;
+    margin-top: -2.5em;
+  padding-left: 4%;
+  padding-right: 4%;*/
+
+  /*z-index:-50;*/
+  /*border-radius: 1em;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 2px 10px 0 rgba(0, 0, 0, 0.10);
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 2px 10px 0 rgba(0, 0, 0, 0.10);
+  -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 2px 10px 0 rgba(0, 0, 0, 0.10);
+  background: RGBA(238,238,238,0.9);*/
+}
+.tabcontent h5 {
+  margin-bottom:0;
+  font-weight:600;
+}
+.tabcontent h6 {
+  /*color: #AAAAAA;*/
+  color: #222;
+  margin-bottom: 1rem;
+}
+.tabcontent .three.columns {
+  background: RGBA(238,238,238,0.9);
+  border-radius: 4px;
+  /*-webkit-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;*/
+  -webkit-transition: -webkit-box-shadow 0.25s ease 0s; 
+  -moz-transition: -moz-box-shadow 0.25s ease 0s; 
+  -o-transition: -o-box-shadow 0.25s ease 0s; 
+  transition: box-shadow 0.25s ease 0s;
+
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 2px 10px 0 rgba(0, 0, 0, 0.10);
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 2px 10px 0 rgba(0, 0, 0, 0.10);
+  -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 2px 10px 0 rgba(0, 0, 0, 0.10);
+}
+.tabcontent .three.columns h5 {
+  color: #222;
+}
+.tabcontent .three.columns:hover {
+  /*background-color: #ECB549;*/
+  -webkit-box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.20), 0 4px 12px 0 rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.20), 0 4px 12px 0 rgba(0, 0, 0, 0.28);
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.20), 0 4px 12px 0 rgba(0, 0, 0, 0.28);
+}
+/*.three.columns:hover h5 {
+  color:white;
+}
+.three.columns:hover h6 {
+  color:white;
+}*/
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+
+#lean_overlay {
+    position: fixed;
+    z-index:100;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%;
+    background: #000;
+    display: none;
+}
+.modal {
+/*  padding: 1.5em;*/
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 2px 10px 0 rgba(0, 0, 0, 0.10);
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 2px 10px 0 rgba(0, 0, 0, 0.10);
+  -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 2px 10px 0 rgba(0, 0, 0, 0.10);
+  background: RGBA(238,238,238,0.9);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+  -webkit-animation-name: bounce 500ms linear;
+  -moz-animation-name: bounce 500ms linear;
+  animation-name: bounce 500ms linear;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  /*width: 50%;
+  max-width: 500px;*/
+  width: 320px;
+  height: 100%;
+  max-height: 568px;
+  /*margin-top:-1.125em;*/
+  border-radius: 1em;
+  /*border-radius: 0;*/
+}
+.modal .button {
+  border-radius: 4px;
+  margin-bottom:0;
+}
+#bio img {
+  width: 100% !important;
+  /*border-radius: 0;*/
+  border-radius: 1em;
+  border-bottom-left-radius:0;
+  border-bottom-right-radius:0;
+  /*margin-bottom: 2.5rem;*/
+}
+#bio p {
+  text-align: left;
+}
+#bio h4 {
+  font-weight: 600;
+  margin-bottom: 0;
+  margin-top: 0.5em;
+}
+#bio h6 {
+  display: inline-block;
+  text-align:left;
+  width:100%;
+  margin: 0;
+  padding: 0;
+  font-weight: 900;
+}
+#bio h5 {
+  font-style: italic;
+}
+#bio .button {
+  /*margin-top: 1.5em;*/
+  margin-bottom:0;
+}
+.scroll {
+  overflow-y: scroll;
+  margin-top: -0.5em;
+padding-left: 1.5em;
+padding-right: 1.5em;
+height: 292px;
+z-index: -1;
+  /*margin-bottom: 2em;*/
+}
+#bio .left {
+  /*float: left;
+  margin-top: 50%;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: 1em;
+  margin-right: 1.5em;*/
+  border-top-left-radius: 0;
+border-bottom-right-radius: 0;
+border-top-right-radius: 0;
+border-bottom-left-radius: 1em;
+float:left;
+width: 25%;
+-webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+#bio .right {
+  /*float: right;
+  margin-top: 50%;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: 1em;
+  margin-left: 1.5em;*/
+    border-top-left-radius: 0;
+border-bottom-left-radius: 0;
+border-top-right-radius: 0;
+border-bottom-right-radius: 1em;
+float:left;
+width: 25%;
+-webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+#bio .modal_close {
+  width: 50%;
+  float:left;
+border-radius: 0;
+-webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+#bio .button-group {
+  margin-top:1px;
+}
+/*#bio p:last-child {
+  margin-bottom:0;
+  padding-bottom:0;
+}*/
+.container.large {
+  max-width: 1150px;
+  width: 100%;
+}
+#bridal-party .container {
+  padding: 0 6px;
+}
+.most-likely-to {
+  padding-bottom:1em;
+  margin-bottom:0;
+}
+
 /* Hero
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .phones {
@@ -275,9 +626,10 @@ path:hover {
   background-image: url('../../images/proposal.jpg');
   background-size: cover;
   background-position: center;
+  background-color: #203E53;
   color: #fff;
 }
-#secondary-picture {
+.secondary-picture {
   background-image: url('../../images/fireworks.jpg');
   background-size: cover;
   background-position: center;
@@ -321,6 +673,8 @@ path:hover {
 @media (min-width: 550px) {
   html {
     font-size: 62.5%; }
+  #bridal-party .container {
+    padding: 0 0.5em; }
   .section {
     padding: 12rem 0 11rem;
   }
@@ -347,16 +701,66 @@ path:hover {
   .hero-heading {
     font-size: 2.4rem;
   }
-  .eight.columns {
-    margin-left: 3vw;
-    min-width: 80%;
-    margin-top: 0;
-    padding-bottom:100px;
+  .container.large {
+    width: 90%;
+  }
+  .modal {
+    width: 100%;
+    max-width: 500px;
+    max-height: 760px;
+  }
+  .scroll {
+    height: 350px;
+  }
+  /* TODO */
+
+  #bio img {
+    border-radius: 1em;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  }
+  .modal {
+    border-radius: 1em;
+  /*border-bottom-left-radius: 0;
+border-bottom-right-radius: 0;*/
+  }
+  .modal h4 {
+    font-size: 1.75em;
+margin-top: 0.5em;
+  }
+  .modal h5 {
+    font-size: 1.25em;
+margin-bottom: 1em;
+  }
+  .modal h6 {
+    font-size: 0.9em;
+  }
+  .modal p {
+    font-size: 0.9em;
+margin-bottom: 1em;
+  }
+  .modal .right {
+      border-top-left-radius: 0;
+border-bottom-left-radius: 0;
+border-top-right-radius: 0;
+border-bottom-right-radius: 1.5em;
+  }
+  .modal .right {
+      border-top-left-radius: 0;
+border-bottom-left-radius: 0;
+border-top-right-radius: 0;
+border-bottom-right-radius: 1.5em;
+  }
+  #bio .button-group {
+    margin-top: 0px;
   }
 }
 
 /* Bigger than 750 */
 @media (min-width: 750px) {
+  #bridal-party .container {
+    padding: 0;
+  }
   .hero {
     height: 190px;
   }
@@ -396,6 +800,48 @@ path:hover {
     margin-top:0;
     margin-bottom:0;
   }
+  .eight.columns {
+    margin-left: 3vw;
+    min-width: 80%;
+    margin-top: 0;
+    padding-bottom:100px;
+  }
+  .navbar-link {
+    margin-left: 1.75rem;
+    margin-right: 1.75rem;
+    font-size: 1.25rem;
+    line-height: 6.5rem;
+  }
+  .navbar-item {
+  display: inline-block;
+  width: auto;
+  }
+  .navbar {
+    position: absolute;
+    background: RGBA(238,238,238,0.9);
+    visibility: visible;
+  }
+  .three.columns {
+    width: 22%;
+    margin-top: 0;
+    /*margin-left:0;*/
+    margin-right:0;
+  }
+  .three.columns {
+    margin-left: 4%;
+  }
+  .three.columns:first-child {
+    margin-left: 0;
+  }
+  #bridal-party .container {
+    width: 92%;
+  }
+  ul.tab li a {
+    padding: 0 30px;
+  }
+  .tabcontent .row {
+    margin-top: 4vw;
+  }
 }
 
 /* Bigger than 1000 */
@@ -432,6 +878,11 @@ path:hover {
   .offset-by-three.columns {
     margin-left: 26%;
   }
+  .navbar-link {
+    margin-left: 2.4rem;
+    margin-right: 2.4rem;
+  }
+
 }
 @media (min-width: 1050px) {
   .show-when-large {
@@ -444,4 +895,15 @@ path:hover {
   #splash-image {
     margin-left: -3em;
   }
+  #main-picture.section.values {
+    padding-bottom: 13vw;
+    padding-top: 17vw;
+  }
+  #main-picture {
+    font-size:1.15em;
+  }
+  #main-picture .eight.columns {
+    width: 100%;
+    margin-left: -15%;
+  } 
 }
