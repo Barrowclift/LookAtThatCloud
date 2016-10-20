@@ -20,12 +20,12 @@
 	         "Ryan"]
 	descriptions = ["Cousin, Maid of Honor",
 	                "Cousin, Maid of Honor",
-	                "Childhood Friend, Bridesmaid",
-	                "Childhood Friend, Bridesmaid",
-	                "College Roommate, Bridesmaid",
+	                "Childhood Friend & Soon-to-be Sister-in-Law, Bridesmaid",
 	                "Childhood Friend, Bridesmaid",
 	                "College Friend, Bridesmaid",
 	                "Soon-to-be Sister-in-Law, Bridesmaid",
+	                "Childhood Friend, Bridesmaid",
+	                "College Roommate, Bridesmaid",
 	                "Brother, Best Man",
 	                "Brother, Best Man",
 	                "Childhood Friend, Groomsman",
@@ -54,11 +54,11 @@
 	youllFindUs = ["Planning extravagant days of fun. Calling the other for advice.",
 	               "Asking Uncle Todd what we should do with the rest of our lives.",
 	               "Hanging out on the deck of the cottage, playing Rumikub and listening to music.",
-	               "Jamming to Rod Tuff Curls and the Bench Press. Encouraging one another to not give up.",
-	               "Dancing at Milwaukee dive bars. Drinking coffee and talking about life.",
 	               "Cracking Jokes. Painting crawl spaces.",
 	               "Swapping travel tips. Squeezing in a run. Raiding each other's closets.",
 	               "Playing with Willow. Talking about wedding planning. Sippin' tea. Going on walks.",
+	               "Jamming to Rod Tuff Curls and the Bench Press. Encouraging one another to not give up.",
+	               "Dancing at Milwaukee dive bars. Drinking coffee and talking about life.",
 	               "Brother and brother of the other brother of the groom",
 	               "Brother of the groom and brother of the other brother of the groom",
 	               "?",
@@ -70,11 +70,11 @@
 	favoriteMemory = ["Playing school and actually doing the homework we assigned ourselves... NERD ALERT!",
 	               "Making up dances to Real McCoy songs, dancing to oldies in Wisconsin (Jeremiah was a bullfrog... BA DUM BUM)",
 	               "Stumbling upon the letters Kari wrote me during our years as pen pals, letters full of references to our childhood memories. Who could forget dodging the now-infamous Orangey and Porky?",
-	               "Aside from our 8 years together at St. Pats, hiking to the Fairy Ponds in Scotland.",
-	               "Spending our Spring Break building for Habitat for Humanity.",
 	               "The annual bike ride to the Popcorn Shop in Wheaton. Lauren's birthday parties, where we would camp out in her backyard and play \"Girls Just Wanna Have Fun\" on repeat.",
 	               "Our trip to Nashville! Dressing up for the annual \"Kegs and Eggs\".",
 	               "New Years Eve, 2013... the \"night it all began\".",
+	               "Aside from our 8 years together at St. Pats, hiking to the Fairy Ponds in Scotland.",
+	               "Spending our Spring Break building for Habitat for Humanity.",
 	               "?1",
 	               "?2",
 	               "?3",
@@ -84,13 +84,13 @@
 	               "?7",
 	               "?8"]
 	mostLikelyTo = ["Be holding a coffee in one hand and a beer in the other. This 4th year medical student is working her tail off.",
-	               "As you if your mountains are blue while tossing you a Coors Light.",
+	               "Ask you if your mountains are blue while tossing you a Coors Light.",
 	               "Give us Phase 10 as a wedding gift.",
-	               "Out-jump anyone in a jumping pic. This ballerina-turned-PA student has still got it.",
-	               "Hand me floss right before I walk down the aisle. Own the dance floor with her husband, Jim.",
 	               "Bust out some silly string at the reception.",
 	               "Meet me for a crack-of-dawn run the morning of the wedding.",
 	               "Lead a prayer before we walk down the aisle.",
+	               "Out-jump anyone in a jumping pic. This ballerina-turned-PA student has still got it.",
+	               "Hand me floss right before I walk down the aisle. Own the dance floor with her husband, Jim.",
 	               "?",
 	               "?",
 	               "?",
@@ -174,7 +174,7 @@
 						$(modal_id).children(".scroll").children(".youll-find-us").text(youllFindUs[personIndex]);
 						$(modal_id).children(".scroll").children(".favorite-memory").text(favoriteMemory[personIndex]);
 						$(modal_id).children(".scroll").children(".most-likely-to").text(mostLikelyTo[personIndex]);
-						
+
 						$(modal_id).fadeTo(200, 1);
 					}
 					$(modal_id)
@@ -220,7 +220,7 @@
 					$(modal_id).children(".scroll").children(".description").text(descriptions[currentIndex])
 					$(modal_id).children(".scroll").children(".youll-find-us").text(youllFindUs[currentIndex]);
 					$(modal_id).children(".scroll").children(".favorite-memory").text(favoriteMemory[currentIndex]);
-					$(modal_id).children(".scroll").children(".most-likely-to").text(mostLikelyTo[currentIndex]);	
+					$(modal_id).children(".scroll").children(".most-likely-to").text(mostLikelyTo[currentIndex]);
 
 					var newBioId = ids[currentIndex]
 				}

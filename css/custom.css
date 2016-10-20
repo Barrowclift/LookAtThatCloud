@@ -52,48 +52,48 @@ h4.section-description {
   margin-left: -9vw;
   margin-top: 0.5em;
 }
-.image-text-shadow {
+.text-shadow {
   text-shadow: 2px 2px 4px #000000;
 }
-.writing p {
+.optimize-for-reading p {
   text-align: left;
   font-size: 1.8rem;
   line-height: 1.9;
 }
-.writing {
+.optimize-for-reading {
   max-width: 829px;
   text-align: center;
   margin: 0 auto;
 }
-.writing h4 {
+.optimize-for-reading h4 {
   text-align: left;
   font-weight: 600;
   margin-top: 4rem;
   margin-bottom: 2rem;
 }
-.writing .section-description {
+.optimize-for-reading .section-description {
   font-style: italic;
   margin-bottom: 4rem;
   color: #D1AC4C;
 }
-.writing img {
+.optimize-for-reading img {
   margin-bottom: 2.5rem;
   width: 100%;
   border-radius: 1em;
 }
-.row .writing {
+.row .optimize-for-reading {
   margin-bottom: 4rem;
 }
-.when-where h4, .hotel h4 {
+.dark-theme h4, .light-theme h4 {
   font-weight: 600;
 }
-.when-where h1, .hotel h4 {
+.dark-theme h1, .light-theme h4 {
   margin-bottom: 2.5rem;
 }
-.hotel .column {
+.light-theme .column {
   text-align: left;
 }
-.hotel h4 {
+.light-theme h4 {
   text-align: center;
 }
 td:nth-last-child(1) {
@@ -111,7 +111,7 @@ a, a:link, a:visited {
 a:hover {
   color: #E7B73C;
 }
-.when-where .one-half {
+.dark-theme .card {
   /*border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 2.5em;
   border-radius: 1em;
@@ -130,12 +130,12 @@ a:hover {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
-.writing img {
+.optimize-for-reading img {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 2px 10px 0 rgba(0, 0, 0, 0.10);
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 2px 10px 0 rgba(0, 0, 0, 0.10);
   -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 2px 10px 0 rgba(0, 0, 0, 0.10);
 }
-.hotel .one-half {
+.light-theme .card {
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 2.5em;
   border-radius: 1em;
@@ -147,10 +147,10 @@ a:hover {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
-.when-where h1, .hotel h1 {
+.dark-theme h1, .light-theme h1 {
   margin-bottom: 4rem;
 }
-.row .writing {
+.row .optimize-for-reading {
   margin-top: 5rem;
 }
 iframe {
@@ -238,7 +238,7 @@ path {
 path:hover {
   fill: #00CBFF;
 }
-.one-half.column {
+.card.column {
   margin-top:2rem;
   margin-bottom:2rem;
 }
@@ -254,7 +254,19 @@ path:hover {
   margin-bottom: 1.2rem;
 }
 
-.navbar {
+.card p {
+  font-size: 1.1em;
+  margin-bottom: 5rem;
+}
+.card iframe {
+  text-align: center;
+  width: 100%;
+}
+.card img {
+  text-align: center;
+  width: 100%;
+}
+nav {
   display: block;
   width: 100%;
   height: 6.5rem;
@@ -266,21 +278,21 @@ path:hover {
   position: relative;
   height: auto;
 }
-.navbar > .container {
+nav > .container {
   width: 100%;
   max-width: 829px;
 }
-.navbar-list {
+nav ul {
   list-style: none;
   margin-bottom: 0;
 }
-.navbar-item {
+nav ul li {
   position: relative;
   margin-bottom: 0;
   display: inline-block;
   width: 49%;
 }
-.navbar-link {
+nav a {
   text-transform: uppercase;
   font-size: 1.5rem;
   font-weight: 700;
@@ -289,20 +301,20 @@ path:hover {
   line-height: 5rem;
   color: #222;
 }
-.navbar-item a:link,
-.navbar-item a:visited {
+nav ul li a:link,
+nav ul li a:visited {
   color: #222;
 }
-.navbar-item a:hover {
+nav ul li a:hover {
   color: #E7B73C;
 }
-/*.navbar {
+/*nav {
     visibility: hidden;
   }*/
 
 
 /* Style the list */
-ul.tab {
+ul.segmented-control {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -313,7 +325,7 @@ ul.tab {
 }
 
 /* Float the list items side by side */
-ul.tab li {
+ul.segmented-control li {
   /*float: left;*/
   display:inline-block;
   margin-left: -2px;
@@ -322,7 +334,7 @@ ul.tab li {
 }
 
 /* Style the links inside the list items */
-ul.tab li a {
+ul.segmented-control li a {
   margin-bottom:0;
     /*display: inline-block;*/
     /*color: black;*/
@@ -334,25 +346,25 @@ ul.tab li a {
     padding-left: 2em;
 padding-right: 2em;
 }
-ul.tab li a.button {
+ul.segmented-control li a.button {
   background-color: white;
   border-color: #ECB549;
   color: #ECB549;
 }
-ul.tab li a.button.active {
+ul.segmented-control li a.button.active {
   background-color: #ECB549;
   border-color: transparent;
   color: white;
 }
 
 /* Change background color of links on hover */
-/*ul.tab li a:hover {background-color: #ddd;}*/
+/*ul.segmented-control li a:hover {background-color: #ddd;}*/
 
 /* Create an active/current tablink class */
-/*ul.tab li a:focus, .active {background-color: #ccc;}*/
+/*ul.segmented-control li a:focus, .active {background-color: #ccc;}*/
 
 /* Style the tab content */
-#bridal-party .container {
+#bridal-party-section .container {
   width: 100%;
   max-width: none;
 }
@@ -361,7 +373,7 @@ ul.tab li a.button.active {
   margin-left: 1.5%;
   margin-right: 1.5%;
 }
-.tabcontent .row {
+.tabview .row {
   margin-top: 0vw;
 }
 .three.columns {
@@ -377,16 +389,16 @@ ul.tab li a.button.active {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-.tabcontent .row {
+.tabview .row {
     -webkit-animation: fadeEffect 0.5s;
     animation: fadeEffect 0.5s; /* Fading effect takes 1 second */
 }
-.tabcontent img {
+.tabview img {
   width: 100%;
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
 }
-.tabcontent {
+.tabview {
   display: none;
   /*margin-top: 1em;*/
     /*padding-top: 4em;
@@ -401,33 +413,33 @@ ul.tab li a.button.active {
   -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 2px 10px 0 rgba(0, 0, 0, 0.10);
   background: RGBA(238,238,238,0.9);*/
 }
-.tabcontent h5 {
+.tabview h5 {
   margin-bottom:0;
   font-weight:600;
 }
-.tabcontent h6 {
+.tabview h6 {
   /*color: #AAAAAA;*/
   color: #222;
   margin-bottom: 1rem;
 }
-.tabcontent .three.columns {
+.tabview .three.columns {
   background: RGBA(238,238,238,0.9);
   border-radius: 4px;
   /*-webkit-transition: background-color 0.1s linear;
   transition: background-color 0.1s linear;*/
-  -webkit-transition: -webkit-box-shadow 0.25s ease 0s; 
-  -moz-transition: -moz-box-shadow 0.25s ease 0s; 
-  -o-transition: -o-box-shadow 0.25s ease 0s; 
+  -webkit-transition: -webkit-box-shadow 0.25s ease 0s;
+  -moz-transition: -moz-box-shadow 0.25s ease 0s;
+  -o-transition: -o-box-shadow 0.25s ease 0s;
   transition: box-shadow 0.25s ease 0s;
 
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 2px 10px 0 rgba(0, 0, 0, 0.10);
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 2px 10px 0 rgba(0, 0, 0, 0.10);
   -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 2px 10px 0 rgba(0, 0, 0, 0.10);
 }
-.tabcontent .three.columns h5 {
+.tabview .three.columns h5 {
   color: #222;
 }
-.tabcontent .three.columns:hover {
+.tabview .three.columns:hover {
   /*background-color: #ECB549;*/
   -webkit-box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.20), 0 4px 12px 0 rgba(0, 0, 0, 0.28);
   -moz-box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.20), 0 4px 12px 0 rgba(0, 0, 0, 0.28);
@@ -479,12 +491,16 @@ ul.tab li a.button.active {
 
   /*width: 50%;
   max-width: 500px;*/
-  width: 320px;
-  height: 100%;
-  max-height: 568px;
+  width: 290px;
+  height: 80%;
+  max-height: 454px;
   /*margin-top:-1.125em;*/
+  margin-top:-1.5em;
   border-radius: 1em;
+  border-bottom-left-radius:0;
+  border-bottom-right-radius:0;
   /*border-radius: 0;*/
+  display:none;
 }
 .modal .button {
   border-radius: 4px;
@@ -521,16 +537,31 @@ ul.tab li a.button.active {
   /*margin-top: 1.5em;*/
   margin-bottom:0;
 }
+.modal h4 {
+  font-size: 1.5em;
+  margin-top: 0.5em;
+}
+.modal h5 {
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+.modal h6 {
+  font-size: 0.65em;
+}
+.modal p {
+  font-size: 0.65em;
+  margin-bottom: 1em;
+}
 .scroll {
   overflow-y: scroll;
   margin-top: -0.5em;
 padding-left: 1.5em;
 padding-right: 1.5em;
-height: 292px;
+height: 237px;
 z-index: -1;
   /*margin-bottom: 2em;*/
 }
-#bio .left {
+#bio .previous_modal {
   /*float: left;
   margin-top: 50%;
   padding-left: 1em;
@@ -551,7 +582,7 @@ width: 25%;
   user-select: none;           /* Non-prefixed version, currently
                                   not supported by any browser */
 }
-#bio .right {
+#bio .next_modal {
   /*float: right;
   margin-top: 50%;
   padding-left: 1em;
@@ -572,7 +603,10 @@ width: 25%;
   user-select: none;           /* Non-prefixed version, currently
                                   not supported by any browser */
 }
-#bio .modal_close {
+#Bridesmaids {
+  display:block;
+}
+#bio .close_modal {
   width: 50%;
   float:left;
 border-radius: 0;
@@ -591,11 +625,11 @@ border-radius: 0;
   margin-bottom:0;
   padding-bottom:0;
 }*/
-.container.large {
+.container.wide-width {
   max-width: 1150px;
   width: 100%;
 }
-#bridal-party .container {
+#bridal-party-section .container {
   padding: 0 6px;
 }
 .most-likely-to {
@@ -619,21 +653,31 @@ border-radius: 0;
 
 /* Values
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.values {
+/*.values {
   padding-bottom: 5rem;
-}
-#main-picture {
+}*/
+header {
   background-image: url('../../images/proposal.jpg');
   background-size: cover;
   background-position: center;
   background-color: #203E53;
   color: #fff;
 }
-.secondary-picture {
+#rsvp-section {
   background-image: url('../../images/fireworks.jpg');
   background-size: cover;
   background-position: center;
   color: #fff;
+}
+#submit {
+  margin-bottom:0;
+  margin-top:1rem;
+}
+#rsvp-section h3 {
+  font-weight:500;
+}
+#rsvp {
+  color: #222222;
 }
 .value-multiplier {
   margin-bottom: .5rem;
@@ -649,13 +693,10 @@ border-radius: 0;
 
 /* Our Story
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.our-story {
-  border-bottom: 1px solid #ddd;
-}
 
 /* When & Where
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.when-where {
+.dark-theme {
   /*background-image: url('../../images/values-bg.jpg');*/
   background: #34454E; /* Old browsers */
   background: -moz-linear-gradient(top, #34454E 0%, #2B3941 100%); /* FF3.6-15 */
@@ -665,15 +706,18 @@ border-radius: 0;
   background-size: cover;
   color: #fff;
 }
-.when-where .section-description, .hotel .section-description { 
+.dark-theme .section-description, .light-theme .section-description {
   margin-bottom: 4rem;
+}
+.container {
+  padding: 0 20px;
 }
 
 /* Bigger than 550 */
 @media (min-width: 550px) {
   html {
     font-size: 62.5%; }
-  #bridal-party .container {
+  #bridal-party-section .container {
     padding: 0 0.5em; }
   .section {
     padding: 12rem 0 11rem;
@@ -682,6 +726,9 @@ border-radius: 0;
     padding-bottom: 12rem;
     text-align: left;
     height: 165px;
+  }
+  .container {
+    padding: 0;
   }
   .phone {
     position: absolute;
@@ -701,13 +748,15 @@ border-radius: 0;
   .hero-heading {
     font-size: 2.4rem;
   }
-  .container.large {
+  .container.wide-width {
     width: 90%;
   }
   .modal {
     width: 100%;
     max-width: 500px;
+    height: 100%;
     max-height: 760px;
+    margin-top:0;
   }
   .scroll {
     height: 350px;
@@ -758,7 +807,7 @@ border-bottom-right-radius: 1.5em;
 
 /* Bigger than 750 */
 @media (min-width: 750px) {
-  #bridal-party .container {
+  #bridal-party-section .container {
     padding: 0;
   }
   .hero {
@@ -787,7 +836,7 @@ border-bottom-right-radius: 1.5em;
     top: -12rem;
     max-height: 472px;
   }
-  .when-where, .hotel {
+  .dark-theme, .light-theme {
     padding: 15rem 0 8rem;
   }
   .six.columns {
@@ -796,7 +845,7 @@ border-bottom-right-radius: 1.5em;
   .offset-by-three.columns {
     margin-left: 17.3333333333%;
   }
-  .one-half.column {
+  .card.column {
     margin-top:0;
     margin-bottom:0;
   }
@@ -806,17 +855,17 @@ border-bottom-right-radius: 1.5em;
     margin-top: 0;
     padding-bottom:100px;
   }
-  .navbar-link {
+  nav a {
     margin-left: 1.75rem;
     margin-right: 1.75rem;
     font-size: 1.25rem;
     line-height: 6.5rem;
   }
-  .navbar-item {
+  nav ul li {
   display: inline-block;
   width: auto;
   }
-  .navbar {
+  nav {
     position: absolute;
     background: RGBA(238,238,238,0.9);
     visibility: visible;
@@ -833,20 +882,20 @@ border-bottom-right-radius: 1.5em;
   .three.columns:first-child {
     margin-left: 0;
   }
-  #bridal-party .container {
+  #bridal-party-section .container {
     width: 92%;
   }
-  ul.tab li a {
+  ul.segmented-control li a {
     padding: 0 30px;
   }
-  .tabcontent .row {
+  .tabview .row {
     margin-top: 4vw;
   }
 }
 
 /* Bigger than 1000 */
 @media (min-width: 1000px) {
-  #main-picture.section {
+  header.section {
     padding: 20rem 0 19rem;
   }
   .section {
@@ -866,10 +915,10 @@ border-bottom-right-radius: 1.5em;
     top: -14rem;
     max-height: 570px;
   }
-  #splash-image h1 {
+  header h1 {
     font-size: 4em;
   }
-  #splash-image h4 {
+  header h4 {
     font-size: 2.5em;
   }
   .six.columns {
@@ -878,7 +927,7 @@ border-bottom-right-radius: 1.5em;
   .offset-by-three.columns {
     margin-left: 26%;
   }
-  .navbar-link {
+  nav a {
     margin-left: 2.4rem;
     margin-right: 2.4rem;
   }
@@ -892,18 +941,18 @@ border-bottom-right-radius: 1.5em;
   .eight.columns {
     margin-left: 0;
   }
-  #splash-image {
+  /*#splash-image {
     margin-left: -3em;
-  }
-  #main-picture.section.values {
+  }*/
+  header.section {
     padding-bottom: 13vw;
     padding-top: 17vw;
   }
-  #main-picture {
+  header {
     font-size:1.15em;
   }
-  #main-picture .eight.columns {
+  header .eight.columns {
     width: 100%;
     margin-left: -15%;
-  } 
+  }
 }
