@@ -362,11 +362,16 @@
 	<div id="rsvp-section" class="section">
 		<div class="container">
 			<div class="row">
-				<h1 class="fade-me section-heading">RSVP</h1>
-				<h3 class="fade-me">We're so excited to celebrate with you</h3>
+				<h1 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);" class="fade-me section-heading">RSVP</h1>
+				<h3 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);" class="fade-me">We're so excited to celebrate with you</h3>
 			</div>
 			<div class="row">
-				<form id="rsvp" name="rsvp" enctype="text/plain" target="hidden_iframe" onsubmit="rsvpFormSubmitted=true;" action="https://docs.google.com/forms/d/e/1FAIpQLSfTBw8eB9voNBge8SumKa_YEKwyUPl2KBjiWlMrsob9Pq65aQ/formResponse" class="six offset-by-three columns">
+				<form id="rsvp" class="six offset-by-three columns" style="margin-top:7rem;">
+					<div id="rsvp-content">
+						<p style="margin-bottom:0;">RSVP form closed as of January 7th. If you need to make a change, please give us a call at <a href="tel:1-630-334-8572">630-334-8572</a>.</p>
+					</div>
+				</form>
+				<!-- <form id="rsvp" name="rsvp" enctype="text/plain" target="hidden_iframe" onsubmit="rsvpFormSubmitted=true;" action="https://docs.google.com/forms/d/e/1FAIpQLSfTBw8eB9voNBge8SumKa_YEKwyUPl2KBjiWlMrsob9Pq65aQ/formResponse" class="six offset-by-three columns">
 					<p id="outdated">We're sorry, but Internet Explorer is an unsupported browser and you'll be unable to electronically RSVP using it. Please, try a modern browser like <a href="">Chrome</a> or <a href="">Firefox</a></p>
 					<div id="rsvp-content">
 						<p>Please give us a call at <a href="tel:1-630-334-8572">630-334-8572</a> or RSVP below. Kindly respond by January 7th.</p>
@@ -448,7 +453,7 @@
 					</div>
 					<input class="button-primary" disabled id="submit" type="submit" value="Submit">
 				</form>
-				<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(rsvpFormSubmitted) {}"></iframe>
+				<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(rsvpFormSubmitted) {}"></iframe> -->
 			</div>
 		</div>
 	</div>
